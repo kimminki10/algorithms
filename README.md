@@ -1,1 +1,5 @@
-this repository is created for study algorighm
+
+알고리즘 공부할래
+===============
+
+1. 백준 풀이
