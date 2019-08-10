@@ -2,6 +2,10 @@
     "files.associations": {
         "vector": "cpp",
         "string": "cpp",
+<<<<<<< HEAD
         "array": "cpp"
+=======
+        "stack": "cpp"
+>>>>>>> 143f72c55595893aa59bcdb2b64ea4bad0122f8b
     }
 }
