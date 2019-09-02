@@ -2,4 +2,11 @@
 *.obj
 *.exe
 *.ilk
-*.dSYM
+*.dSYM/*
+*.xml
+*.cmake
+*.plist
+CMake*
+*.iml
+.DS_Store
+.idea/*
