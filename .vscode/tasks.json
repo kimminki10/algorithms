@@ -10,6 +10,7 @@
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}",
+                "-std=c++14",
             ],
             "options": {
                 "cwd": "/usr/bin"
