@@ -1,28 +1,26 @@
 #include <stdio.h>
 
-int d[1003]; 
-/* 
-   d[n] = m 최대길이가 n일 때 최대값 m
-*/
-int arr[1003];
-int main() {
-    int N;
-    scanf("%d", &N);
+int d[1003];
+int arr[1001];
+int main()
+{
+    int n;
+    scanf("%d", &n);
 
-    for (int i = 1; i <= N; i++) {
-        scanf("%d", &arr[i]);
-    }
+    for (int i = 0; i < n; i++)
+        scanf(" %d", &arr[i]);
 
-    int di = 1;
-    d[1] = arr[1];
-    for (int i = 2; i <= N; i++) {
-        if (d[di] < arr[i]) { // 큰게 나오면
-            di += 1;
-            d[di] = arr[i];
-        } else if (d[di-1] < arr[i]) { // 이전꺼보다는 또 작으면
-            d[di] = arr[i];
+    for (int i = 0; i < n; i++) {
+        d[i] = 1;
+        for (int j = 0; j < i; j++) {
+            if (arr[j] < arr[i] && d[i] < d[j] + 1) {
+                d[i] = d[j] + 1;
+            }
         }
     }
-    
-    printf("%d\n", di);
+    int result = 0;
+    for (int i = 0; i < n; i++) {
+        if (result < d[i]) result = d[i];
+    }
+    printf("%d\n", result);
 }
