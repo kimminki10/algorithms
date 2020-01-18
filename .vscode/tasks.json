@@ -35,19 +35,37 @@
         },
         {
             "type": "shell",
-            "label": "go run aaaa.go < input.txt",
+            "label": "window go run aaaa.go < input.txt",
             "command": "Get-Content",
             "args": [
                 "input.txt",
                 "|",
                 "go",
                 "run",
-                "${file}",
+                "${file}"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "type": "shell",
+            "label": "mac go run aaaa.go < input.txt",
+            "command": "go",
+            "args": [
+                "run",
+                "${file}",
+                "<",
+                "input.txt"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$go"
+            ]
         }
     ]
 }
