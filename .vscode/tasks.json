@@ -47,7 +47,10 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
-            }
+            },
+            "problemMatcher": [
+                "$go"
+            ]
         },
         {
             "type": "shell",
