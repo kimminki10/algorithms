@@ -10,3 +10,4 @@ CMake*
 *.iml
 .DS_Store
 .idea/*
+input.txt
