@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"sort"
 )
 
 var writer = bufio.NewWriter(os.Stdout)
@@ -13,29 +12,26 @@ var reader = bufio.NewReader(os.Stdin)
 func printf(f string, a ...interface{}) { fmt.Fprintf(writer, f, a...) }
 func scanf(f string, a ...interface{})  { fmt.Fscanf(reader, f, a...) }
 
-type person struct {
-	height int
-	weight int
-}
-
-type personSlice []person
-
-func (p personSlice) Len() int { return len(p) }
-func (p personSlice) Less(i, j int) bool {
-	return (p[i].height < p[j].height && p[i].weight <= p[j].weight) ||
-		(p[i].height <= p[j].height && p[i].weight < p[j].weight)
-}
-func (p personSlice) Swap(i, j int) { p[i], p[j] = p[j], p[i] }
-
 func main() {
-	var n int
-	var people [51]person
+	defer writer.Flush()
 
+	var n int
 	scanf("%d\n", &n)
+
+	var h [51]int
+	var w [51]int
+
 	for i := 0; i < n; i++ {
-		scanf("%d %d\n", &(people[i].height), &(people[i].weight))
+		scanf("%d %d\n", &h[i], &w[i])
 	}
 
-	sort.Sort(personSlice(people[:n]))
-	fmt.Println(people)
+	for i := 0; i < n; i++ {
+		count := 0
+		for j := 0; j < n; j++ {
+			if w[i] < w[j] && h[i] < h[j] {
+				count++
+			}
+		}
+		printf("%d ", count+1)
+	}
 }
