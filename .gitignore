@@ -10,8 +10,5 @@ CMake*
 *.iml
 .DS_Store
 .idea/*
-<<<<<<< HEAD
 ./input.txt
-=======
 *input.txt
->>>>>>> 059ca4983b9b4a959d8253020013b7c5d7521699
