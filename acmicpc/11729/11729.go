@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+
 	"math"
 	"os"
 )
@@ -22,6 +23,7 @@ func hanoi(s, d int, n float64) {
 
 func main() {
 	in := bufio.NewReader(os.Stdin)
+
 	var n float64
 	fmt.Fscanf(in, "%f\n", &n)
 	fmt.Fprintf(out, "%.0f\n", math.Pow(2.0, n)-1)
