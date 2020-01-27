@@ -11,3 +11,4 @@ CMake*
 .DS_Store
 .idea/*
 input.txt
+.vscode/*
