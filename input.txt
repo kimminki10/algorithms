@@ -1,6 +1,1 @@
-1
-4
-a hat
-b hat
-c pants
-d short
+10
