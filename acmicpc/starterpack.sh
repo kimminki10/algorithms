@@ -5,4 +5,4 @@ echo "#include <cstdio>
 int main() {
 
 }
-" > $1/$1.cc
+" >> $1/$1.cc
