@@ -7,14 +7,14 @@
  */
 #include <cstdio>
 #include <vector>
-typedef long long LL;
+typedef long long ll;
 using namespace std;
 
 int k, n;
-vector<LL> kv;
+vector<ll> kv;
 
-LL calcNum(LL length) {
-    LL ret = 0;
+ll calcNum(ll length) {
+    ll ret = 0;
     for (auto i = kv.begin(); i != kv.end(); i++){
         ret += ((*i) / length);
     }
@@ -27,15 +27,15 @@ bool isPossible(int length) {
 }
 
 int main() {
-    LL high = 0;
+    ll high = 0;
     scanf("%d %d", &k, &n);
     for (int i = 0; i < k; i++) {
-        LL tmp; scanf("%lld", &tmp);
+        ll tmp; scanf("%lld", &tmp);
         kv.push_back(tmp);
         high = high < tmp ? tmp: high;
     }
 
-    LL l= 1, r = high, m, ans = -1;
+    ll l= 1, r = high, m, ans = -1;
     while (l <= r) {
         m = (l + r) / 2;
         if (isPossible(m)) {
