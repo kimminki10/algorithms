@@ -6,6 +6,7 @@
 *.xml
 *.cmake
 *.plist
+*a.out
 CMake*
 *.iml
 .DS_Store
