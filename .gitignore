@@ -13,3 +13,4 @@ CMake*
 .idea/*
 input.txt
 .vscode/*
+.venv/*
